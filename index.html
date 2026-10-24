@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080d18" />
+  <meta name="description" content="A magical, interactive wizarding-world inspired landing page." />
+  <title>The Enchanted Archives</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <div class="stars"></div><div class="moon"></div>
+    <div class="floating-particles" id="particles"></div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="The Enchanted Archives home"><span class="brand-mark">✦</span> THE ENCHANTED ARCHIVES</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="navigation">
+      <a href="#discover">Discover</a><a href="#houses">Houses</a><a href="#spells">Spellbook</a>
+    </nav>
+    <button class="sound-button" id="magicButton" type="button">✧ Cast a Spell</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> A WORLD BEYOND THE ORDINARY <span></span></p>
+        <h1>Where <em>magic</em><br>comes alive.</h1>
+        <p class="hero-description">Pass through the veil, discover ancient secrets, and let a little wonder find its way into your world.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#discover">Begin Your Journey <span>↗</span></a>
+          <a class="text-button" href="#houses">Explore the realms <span>↓</span></a>
+        </div>
+        <div class="hero-note"><span class="sparkle">✦</span><span>THE ARCHIVES ARE OPEN</span><span class="note-line"></span><span class="note-small">Since the first flicker of starlight</span></div>
+      </div>
+      <div class="hero-art reveal" aria-label="Illustrated magical castle beneath a moonlit sky">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="magic-ring ring-one"></div><div class="magic-ring ring-two"></div>
+        <div class="castle">
+          <div class="tower tower-left"><i></i></div><div class="tower tower-mid"><i></i></div>
+          <div class="tower tower-right"><i></i></div><div class="castle-body"></div>
+          <div class="window w1"></div><div class="window w2"></div><div class="window w3"></div><div class="window w4"></div>
+          <div class="bridge"></div>
+        </div>
+        <div class="hill hill-back"></div><div class="hill hill-front"></div>
+        <div class="flying-book">✧</div><div class="flying-star star-a">✦</div><div class="flying-star star-b">✧</div>
+        <div class="art-caption"><span>THE OLD ACADEMY</span><span>EST. IN MYSTERY</span></div>
+      </div>
+      <a class="scroll-cue" href="#discover"><span></span> SCROLL TO DISCOVER</a>
+    </section>
+
+    <section class="intro section reveal" id="discover">
+      <p class="eyebrow">✧ YOUR STORY STARTS HERE ✧</p>
+      <h2>Some doors are meant<br>to be <em>discovered.</em></h2>
+      <p class="section-copy">Beyond the misty mountains lies a place where enchanted objects whisper, forgotten libraries hold their breath, and every curious soul has a destiny waiting to unfold.</p>
+    </section>
+
+    <section class="feature-grid section">
+      <article class="feature-card reveal">
+        <div class="feature-visual library-visual"><div class="book-stack">▤<br>▤<br>▤</div><span class="visual-symbol">✧</span></div>
+        <p class="card-kicker">01 / KNOWLEDGE</p><h3>The Hidden Library</h3><p>Ancient pages, secret passages, and stories that choose their readers.</p><a href="#spells" class="card-link">Open the archives <span>↗</span></a>
+      </article>
+      <article class="feature-card reveal">
+        <div class="feature-visual forest-visual"><div class="forest-moon"></div><div class="tree t1"></div><div class="tree t2"></div><div class="tree t3"></div><span class="forest-firefly">✦</span></div>
+        <p class="card-kicker">02 / ADVENTURE</p><h3>The Whispering Woods</h3><p>Follow the floating lights, but listen carefully to the trees.</p><a href="#houses" class="card-link">Enter the forest <span>↗</span></a>
+      </article>
+      <article class="feature-card reveal">
+        <div class="feature-visual potion-visual"><div class="potion-bottle"><span></span></div><div class="potion-bubbles">· &nbsp; ·<br>&nbsp; ·</div></div>
+        <p class="card-kicker">03 / ALCHEMY</p><h3>The Potion Atelier</h3><p>Glowing elixirs, curious ingredients, and the art of transformation.</p><a href="#spells" class="card-link">Mix a little magic <span>↗</span></a>
+      </article>
+    </section>
+
+    <section class="houses-section section reveal" id="houses">
+      <div class="houses-heading"><div><p class="eyebrow">✧ FIND YOUR PLACE ✧</p><h2>Four paths.<br><em>One destiny.</em></h2></div><p>Every great story begins with a choice. Which magical spirit speaks to you?</p></div>
+      <div class="house-grid">
+        <button class="house-card house-gold" data-house="The Sunward" data-description="Brave hearts, bold choices, and a fire that never fades."><span class="house-icon">♌</span><span class="house-name">The Sunward</span><span class="house-trait">COURAGE · HONOUR</span><span class="house-detail">Reveal your path ↗</span></button>
+        <button class="house-card house-blue" data-house="The Starweavers" data-description="Curious minds, clever questions, and a love of discovery."><span class="house-icon">✧</span><span class="house-name">The Starweavers</span><span class="house-trait">WISDOM · WONDER</span><span class="house-detail">Reveal your path ↗</span></button>
+        <button class="house-card house-green" data-house="The Thornveil" data-description="Patient ambition, quiet determination, and plans within plans."><span class="house-icon">❧</span><span class="house-name">The Thornveil</span><span class="house-trait">AMBITION · CRAFT</span><span class="house-detail">Reveal your path ↗</span></button>
+        <button class="house-card house-violet" data-house="The Moonkeepers" data-description="Loyal spirits, generous hearts, and magic shared with others."><span class="house-icon">☾</span><span class="house-name">The Moonkeepers</span><span class="house-trait">LOYALTY · KINDNESS</span><span class="house-detail">Reveal your path ↗</span></button>
+      </div>
+      <p class="house-result" id="houseResult" aria-live="polite">Choose a path to reveal its magic.</p>
+    </section>
+
+    <section class="spell-section section reveal" id="spells">
+      <div class="spell-glow"></div><p class="eyebrow">✧ A MOMENT OF WONDER ✧</p>
+      <h2>Magic is closer<br>than you <em>think.</em></h2>
+      <p>Tap the button below. Make a wish, and watch the night answer.</p>
+      <button class="spell-cast" id="spellCast"><span>✧</span> Cast a little magic <span>✧</span></button>
+      <p class="spell-message" id="spellMessage" aria-live="polite">The air is still. Your wand is waiting.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#home"><span class="brand-mark">✦</span> THE ENCHANTED ARCHIVES</a><p>An original fantasy-inspired fan-style concept. Not affiliated with any film franchise.</p><a href="#home" class="back-top">BACK TO THE STARS ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

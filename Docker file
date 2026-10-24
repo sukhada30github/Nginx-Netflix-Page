@@ -1,0 +1,16 @@
+
+FROM nginx:alpine
+
+# Remove the default Nginx welcome page
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy website files into the Nginx web root
+COPY index.html /usr/share/nginx/html/
+COPY style.css /usr/share/nginx/html/
+COPY script.js /usr/share/nginx/html/
+
+# Expose the HTTP port
+EXPOSE 80
+
+# Keep Nginx running in the foreground
+CMD ["nginx", "-g", "daemon off;"]
